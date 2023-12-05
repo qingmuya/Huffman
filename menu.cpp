@@ -6,9 +6,12 @@
 void menu(){
     printf("\t*****欢迎使用以下功能****\n");
     printf("\t0：退出\n");
-    printf("\t1：创建哈夫曼树\n");
-    printf("\t2：输出每个字符的哈夫曼编码\n");
-    printf("\t3：计算哈夫曼树的带权路径长度\n");
+    printf("\t1：获取字符权重\n");
+    printf("\t2：构建哈夫曼树\n");
+    printf("\t3：哈夫曼编码\n");
+    printf("\t4：加密\n");
+    printf("\t4：译码\n");
+    printf("\t4：打印哈夫曼树\n");
     printf("\t键入选项前数字调用功能：\n");
 }
 

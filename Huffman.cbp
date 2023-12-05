@@ -7,7 +7,7 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/C_Experiment04" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/Huffman" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/C_Experiment04" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/Huffman" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -37,10 +37,6 @@
 		<Unit filename="create_Huffman_tree.cpp" />
 		<Unit filename="create_Huffman_tree.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="menu.cpp" />
-		<Unit filename="menu.h" />
-		<Unit filename="print_Huffman_code.cpp" />
-		<Unit filename="print_Huffman_code.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
