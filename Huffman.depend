@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1701747222 source:d:\code\github\huffman\main.cpp
+	<iostream>
+	"menu.h"
+
+1701746346 d:\code\github\huffman\create_huffman_tree.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+
+1701747079 d:\code\github\huffman\menu.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	"Create_Huffman_tree.h"
+	"Decode.h"
+	"Encode_char.h"
+	"Encode_string.h"
+	"Get_weight_char.h"
+	"Print_Huffman_Tree.h"
+
+1701747009 d:\code\github\huffman\decode.h
+
+1701747009 d:\code\github\huffman\encode_char.h
+
+1701747009 d:\code\github\huffman\encode_string.h
+
+1701747009 d:\code\github\huffman\get_weight_char.h
+
+1701747009 d:\code\github\huffman\print_huffman_tree.h
+
+1701747099 source:d:\code\github\huffman\create_huffman_tree.cpp
+	"menu.h"
+
+1701747205 source:d:\code\github\huffman\decode.cpp
+	"menu.h"
+
+1701747205 source:d:\code\github\huffman\encode_char.cpp
+	"menu.h"
+
+1701747205 source:d:\code\github\huffman\encode_string.cpp
+	"menu.h"
+
+1701747205 source:d:\code\github\huffman\get_weight_char.cpp
+	"menu.h"
+
+1701747205 source:d:\code\github\huffman\print_huffman_tree.cpp
+	"menu.h"
+

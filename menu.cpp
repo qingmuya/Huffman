@@ -1,6 +1,3 @@
-#include "Cal_len_Huffman.h"
-#include "create_Huffman_tree.h"
-#include "print_Huffman_code.h"
 #include "menu.h"
 
 void menu(){
@@ -23,25 +20,37 @@ void Selectmenu(){
             case 0:
                 exit(1);
             case 1:
-                //创建哈夫曼树
-                HuffmanTree HT;
-                int n;
-                cout<<"请输入总数:\n";
-                scanf("%d",&n);
-                create_huffman_tree(HT,n);
+                //获取字符权重：根据file.txt文件获取字符串权重
+                Get_weight_char();
                 refresh();
                 break;
             case 2:{
-                //输出每个字符对应的哈夫曼编码
-                HuffTree HT;
-                print_huffman_code(HT);
+                //构建哈夫曼树：建立哈夫曼树并存于文件：HfmTree.txt
+                Create_Huffman_tree();
                 refresh();
                 break;
             }
             case 3:{
-                //计算带权路径长度
-                Huffmantree HT;
-                cal_len_huffman_tree(HT);
+                //编码：根据HfmTree.txt求出每个字符的哈夫曼编码，然后将结果存入文件CodeFile.txt中。
+                Encode_char();
+                refresh();
+                break;
+            }
+            case 4:{
+                //加密：根据编码将file.txt文件加密，结果存于TextFile.txt
+                Encode_string();
+                refresh();
+                break;
+            }
+            case 5:{
+                //译码：读取TextFile.txt文件编码，进行译码，并显示结果。
+                Decode();
+                refresh();
+                break;
+            }
+            case 6:{
+                //打印哈夫曼树
+                Print_Huffman_Tree();
                 refresh();
                 break;
             }

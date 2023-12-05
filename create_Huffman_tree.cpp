@@ -1,13 +1,9 @@
-#include "Cal_len_Huffman.h"
-#include "create_Huffman_tree.h"
-#include "print_Huffman_code.h"
 #include "menu.h"
-#include <iostream>
 
 using namespace std;
 
 //´´½¨¹ş·òÂüÊ÷
-void create_huffman_tree(HuffmanTree &HT,int n){
+void Create_Huffman_tree(HuffmanTree &HT,int n){
     int m, s1, s2, i;
     if (n <= 1){
         return;
