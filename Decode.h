@@ -3,6 +3,6 @@
 
 #include "menu.h"
 
-void Decode();
+void Decode(HuffmanTree HT,int m);
 
 #endif // DECODE_H_INCLUDED
