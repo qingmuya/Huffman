@@ -1,17 +1,12 @@
 #include "menu.h"
 using namespace std;
 vector<double> Get_weight_char() {
+    //打开文件并且保存字符串至s
     ifstream inputfile("file.txt");
-
-    // 检查文件是否成功打开
-    if (!inputfile) {
-        cerr << "文件打开失败" << endl;
-        exit(EXIT_FAILURE);
-    }
     string s((istreambuf_iterator<char>(inputfile)), istreambuf_iterator<char>());
     inputfile.close();
 
-    // 逐字符转换为小写
+    // 字符转换为小写
     transform(s.begin(), s.end(), s.begin(), ::tolower);
     vector<int> ch(27, 0);
     vector<double> pro;
@@ -21,12 +16,11 @@ vector<double> Get_weight_char() {
         sum = sum + count(s.begin(), s.end(), n);
         ch[i] = count(s.begin(), s.end(), n);
     }
-    pro.push_back(sum);
+    pro.push_back(sum);//把总个数放入向量的第一个元素中剩下的下标1-26都是字母出现的概率
     // 计算各个字母概率
     for (int i = 1; i <= 26; i++) {
         pro.push_back(static_cast<double>(ch[i])/sum);
     }
-
     return pro;
 }
 

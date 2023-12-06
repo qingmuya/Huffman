@@ -67,11 +67,12 @@
 	"Get_weight_char.h"
 	"Print_Huffman_Tree.h"
 
-1701749073 d:\github\huffman\create_huffman_tree.h
+1701834340 d:\github\huffman\create_huffman_tree.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<iostream>
+	"menu.h"
 
 1701828032 d:\code\github\huffman\decode.h
 	"menu.h"
@@ -110,7 +111,7 @@
 	<string.h>
 	<iostream>
 
-1701822595 d:\github\huffman\menu.h
+1701833667 d:\github\huffman\menu.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -127,12 +128,7 @@
 	"Get_weight_char.h"
 	"Print_Huffman_Tree.h"
 
-1701748138 source:d:\github\huffman\create_huffman_tree.cpp
-	"Cal_len_Huffman.h"
-	"create_Huffman_tree.h"
-	"print_Huffman_code.h"
-	"menu.h"
-	<iostream>
+1701833667 source:d:\github\huffman\create_huffman_tree.cpp
 	"menu.h"
 
 1701748138 source:d:\github\huffman\main.cpp
@@ -143,26 +139,30 @@
 	<iostream>
 	"menu.h"
 
-1701748138 d:\github\huffman\decode.h
-
-1701748138 d:\github\huffman\encode_char.h
-
-1701748138 d:\github\huffman\encode_string.h
-
-1701822296 d:\github\huffman\get_weight_char.h
-
-1701748138 d:\github\huffman\print_huffman_tree.h
-
-1701748138 source:d:\github\huffman\encode_char.cpp
+1701833667 d:\github\huffman\decode.h
 	"menu.h"
 
-1701748138 source:d:\github\huffman\encode_string.cpp
+1701837274 d:\github\huffman\encode_char.h
+
+1701838506 d:\github\huffman\encode_string.h
 	"menu.h"
 
-1701823091 source:d:\github\huffman\get_weight_char.cpp
+1701842652 d:\github\huffman\get_weight_char.h
 	"menu.h"
 
-1701823406 source:d:\github\huffman\menu.cpp
+1701833667 d:\github\huffman\print_huffman_tree.h
+	"menu.h"
+
+1701838692 source:d:\github\huffman\encode_char.cpp
+	"menu.h"
+
+1701844074 source:d:\github\huffman\encode_string.cpp
+	"menu.h"
+
+1701843095 source:d:\github\huffman\get_weight_char.cpp
+	"menu.h"
+
+1701843804 source:d:\github\huffman\menu.cpp
 	"menu.h"
 
 1701748138 source:d:\github\huffman\print_huffman_tree.cpp

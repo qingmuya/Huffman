@@ -15,7 +15,7 @@ typedef struct{
     double weight;  //结点的权重
     int parent, lchild, rchild;  //结点的双亲、左孩子、右孩子的下标
 }HTNode,*HuffmanTree;
-
+typedef char **HuffmanCode;
 //创建哈夫曼树
 HuffmanTree Create_Huffman_tree(vector<double> arr);
 //返回两个最小值
