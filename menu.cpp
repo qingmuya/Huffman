@@ -31,7 +31,15 @@ void Selectmenu(){
             }
             case 2:{
                 //构建哈夫曼树：建立哈夫曼树并存于文件：HfmTree.txt
-                Create_Huffman_tree(Get_weight_char());
+                vector<double> arr = Get_weight_char();
+                int n = 0;  //n用来存储权重不为0的结点的数量
+                for(int i = 1;i < arr.size() - 1;i++){
+                    if(arr[i] != 0){
+                        n++;
+                    }
+                }
+                output(Create_Huffman_tree(Get_weight_char()),n * 2 - 1);
+                cout<<"已将哈夫曼树输出至文件：HfmTree.txt";
                 refresh();
                 break;
             }

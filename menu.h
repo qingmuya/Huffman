@@ -19,13 +19,6 @@
 #include "Get_weight_char.h"
 #include "Print_Huffman_Tree.h"
 
-//哈夫曼树的存储结构
-typedef struct{
-    char ch;
-    double weight;  //结点的权重
-    int parent, lchild, rchild;  //结点的双亲、左孩子、右孩子的下标
-}HTNode,*HuffmanTree;
-
 //菜单函数
 void menu();
 //刷新函数

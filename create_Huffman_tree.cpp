@@ -3,15 +3,23 @@
 using namespace std;
 
 //创建哈夫曼树
-void Create_Huffman_tree(vector<double> arr){
+HuffmanTree Create_Huffman_tree(vector<double> arr){
     /**
      * 尝试将向量中的值存入结构体数组中：即树的结点
+     * 剔除权重为0的结点
     */
+
+    int n = 0;  //n用来存储权重不为0的结点的数量
+    for(int i = 1;i < arr.size() - 1;i++){
+        if(arr[i] != 0){
+            n++;
+        }
+    }
 
     //新建哈夫曼树
     HuffmanTree HT;
     //初始化
-    int m = arr.size() * 2 - 1;
+    int m = n * 2 - 1,s1,s2;
     HT = new HTNode[m + 1];
     for(int i = 1; i <= m ; ++i){
         HT[i].parent = 0;
@@ -19,67 +27,45 @@ void Create_Huffman_tree(vector<double> arr){
         HT[i].rchild = 0;
     }
 
-    for(int i = 0;i < arr.size();i++){
-        HT[i].ch = (char)('a' + i);
-        HT[i].weight = arr[i + 1];
+    //字母的递增和元素序列的递增要分开控制
+    int index_of_weight = 0;
+    for(int i = 0;i < arr.size() - 1;i++){
+        if(arr[i + 1] != 0){
+            HT[index_of_weight].ch = (char)('a' + i);
+            HT[index_of_weight].weight = arr[i + 1];
+            index_of_weight++;
+        }
     }
 
-    cout<<"char/tweiht"<<endl;
-    for(int i = 0;i < arr.size();i++){
-        cout<<HT[i].ch<<"/t"<<HT[i].weight<<endl;
+    /**
+     * 最小生成树
+     * 最终树的结点个数为m：要添加结点的数量*2-1  （ m = 2 * n - 1 ）
+    */
+    for (int i = n; i < m; ++i){
+        Select(HT, i - 1, s1, s2);
+        HT[s1].parent = i;
+        HT[s2].parent = i;
+        HT[i].lchild = s1;
+        HT[i].rchild = s2;
+        HT[i].ch = '-';
+        HT[i].weight = HT[s1].weight + HT[s2].weight;
     }
 
-
-    // int m, s1, s2, i;
-    // if (n <= 1){
-    //     return;
-    // }
-    // m = 2 * n - 1;
-
-    // //初始化
-    // HT = new HTNode[m + 1];
-    // for (i = 1; i <= m ; ++i){
-    //     HT[i].parent = 0;
-    //     HT[i].lchild = 0;
-    //     HT[i].rchild = 0;
-    // }
-
-    // //录取叶子节点的权值
-    // cout << "请输入叶子结点的权值：\n";
-    // for (i = 1; i <= n; ++i){
-    //     cin >> HT[i].weight;
-    // }
-
-    // /**
-    //  * 最小生成树
-    //  * 最终树的结点个数为m：要添加结点的数量*2-1  （ m = 2 * n - 1 ）
-    // */
-    // for (i = n + 1; i <= m; ++i){
-    //     Select(HT, i - 1, s1, s2);
-    //     HT[s1].parent = i;
-    //     HT[s2].parent = i;
-    //     HT[i].lchild = s1;
-    //     HT[i].rchild = s2;
-    //     HT[i].weight = HT[s1].weight + HT[s2].weight;
-    // }
-
-
-    // printf("weight  parent  lchild  rchild\n");
-    // print(HT,m);
+    return HT;
 }
 
 //补全课本中函数，返回两个最小权值
-/*void Select(HuffmanTree HT, int len, int &s1, int &s2){
+void Select(HuffmanTree HT, int len, int &s1, int &s2){
     int i, min1 = 100, min2 = 100; //赋一个较大的值，防止开始就被返回
-    for (i = 1; i <= len; i++){
+    for (i = 0; i <= len; i++){
         if (HT[i].weight < min1 && HT[i].parent == 0){
             min1 = HT[i].weight;
             s1 = i;
         }
     }
-    int zs = HT[s1].weight; //将原值存放起来，然后先赋予最大值，防止s1被重复选择
+    double zs = HT[s1].weight; //将原值存放起来，然后先赋予最大值，防止s1被重复选择
     HT[s1].weight = 0x3f3f3f3f;
-    for (i = 1; i <= len; i++){
+    for (i = 0; i <= len; i++){
         if (HT[i].weight < min2 && HT[i].parent == 0){
             min2 = HT[i].weight;
             s2 = i;
@@ -89,8 +75,13 @@ void Create_Huffman_tree(vector<double> arr){
 }
 
 //打印输出
-void print(HuffmanTree HT,int n){
-    for(int i = 1;i < n + 1;i++){
-        printf("%d\t%d\t%d\t%d\n",HT[i].weight,HT[i].parent,HT[i].lchild,HT[i].rchild);
+void output(HuffmanTree HT,int n){
+    ofstream outfile;
+    outfile.open("HfmTree.txt");
+
+    outfile<<"index"<<"\t"<<"char"<<"\t"<<"weight"<<"\t"<<"parent"<<"\t"<<"lchild"<<"\t"<<"rchile"<<endl;
+    for(int i = 0;i < n;i++){
+        outfile<<i<<"\t"<<HT[i].ch<<"\t"<<HT[i].weight<<"\t"<<HT[i].parent<<"\t"<<HT[i].lchild<<"\t"<<HT[i].rchild<<endl;
     }
-}*/
+    outfile.close();
+}
