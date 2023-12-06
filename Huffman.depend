@@ -1,19 +1,34 @@
 # depslib dependency file v1.0
+<<<<<<< HEAD
 1701747222 source:d:\code\github\huffman\main.cpp
 	<iostream>
 	"menu.h"
 
 1701746346 d:\code\github\huffman\create_huffman_tree.h
+=======
+1701744291 source:d:\github\huffman\cal_len_huffman.cpp
+	"Cal_len_Huffman.h"
+	"create_Huffman_tree.h"
+	"print_Huffman_code.h"
+	"menu.h"
+
+1701744291 d:\github\huffman\cal_len_huffman.h
+>>>>>>> 4e6ad31421a06f43cc2a3a3c41c3085579b8ba30
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<iostream>
 
+<<<<<<< HEAD
 1701747079 d:\code\github\huffman\menu.h
+=======
+1701744291 d:\github\huffman\create_huffman_tree.h
+>>>>>>> 4e6ad31421a06f43cc2a3a3c41c3085579b8ba30
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<iostream>
+<<<<<<< HEAD
 	"Create_Huffman_tree.h"
 	"Decode.h"
 	"Encode_char.h"
@@ -47,5 +62,32 @@
 	"menu.h"
 
 1701747205 source:d:\code\github\huffman\print_huffman_tree.cpp
+=======
+
+1701744291 d:\github\huffman\print_huffman_code.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+
+1701744291 d:\github\huffman\menu.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+
+1701744291 source:d:\github\huffman\create_huffman_tree.cpp
+	"Cal_len_Huffman.h"
+	"create_Huffman_tree.h"
+	"print_Huffman_code.h"
+	"menu.h"
+	<iostream>
+
+1701744291 source:d:\github\huffman\main.cpp
+	<iostream>
+	"Cal_len_Huffman.h"
+	"create_Huffman_tree.h"
+	"print_Huffman_code.h"
+>>>>>>> 4e6ad31421a06f43cc2a3a3c41c3085579b8ba30
 	"menu.h"
 
