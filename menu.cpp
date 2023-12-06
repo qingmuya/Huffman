@@ -19,14 +19,19 @@ void Selectmenu(){
         switch(xz){
             case 0:
                 exit(1);
-            case 1:
+            case 1:{
                 //获取字符权重：根据file.txt文件获取字符串权重
-                Get_weight_char();
+                vector<double> arr=Get_weight_char();
+                cout<<"sum:"<<arr[0]<<endl;
+                for(int i = 1;i<=26;i++){
+                    cout<<(char)('a'+i-1)<<":"<<arr[i]<<endl;
+                }
                 refresh();
                 break;
+            }
             case 2:{
                 //构建哈夫曼树：建立哈夫曼树并存于文件：HfmTree.txt
-                Create_Huffman_tree();
+                //Create_Huffman_tree();
                 refresh();
                 break;
             }

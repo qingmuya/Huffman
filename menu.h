@@ -4,7 +4,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <iostream>
+#include<iostream>//c++¿â
+#include<algorithm>//Ëã·¨¿â
+#include <string>//×Ö·û´®
+#include <fstream>
+#include <vector>
+#include <cmath>
+
+
 #include "Create_Huffman_tree.h"
 #include "Decode.h"
 #include "Encode_char.h"

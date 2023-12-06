@@ -1,25 +1,46 @@
 # depslib dependency file v1.0
+140729996726698 <<<<<<< HEAD
+
 1701747222 source:d:\code\github\huffman\main.cpp
 	<iostream>
 	"menu.h"
 
 1701746346 d:\code\github\huffman\create_huffman_tree.h
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<iostream>
 
-1701747079 d:\code\github\huffman\menu.h
+1701744291 source:d:\github\huffman\cal_len_huffman.cpp
+	"Cal_len_Huffman.h"
+	"create_Huffman_tree.h"
+	"print_Huffman_code.h"
+	"menu.h"
+
+1701744291 d:\github\huffman\cal_len_huffman.h
+
+1701744291 ad31421a06f43cc2a3a3c41c3085579b8ba30
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	"menu.h"
+
+1701744291 D
 	"Create_Huffman_tree.h"
 	"Decode.h"
 	"Encode_char.h"
 	"Encode_string.h"
 	"Get_weight_char.h"
 	"Print_Huffman_Tree.h"
+
+1701747079 d:\code\github\huffman\menu.h
+
+1701749073 d:\github\huffman\create_huffman_tree.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
 
 1701747009 d:\code\github\huffman\decode.h
 
@@ -47,5 +68,62 @@
 	"menu.h"
 
 1701747205 source:d:\code\github\huffman\print_huffman_tree.cpp
+
+1701744291 d:\github\huffman\print_huffman_code.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+
+1701822595 d:\github\huffman\menu.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<algorithm>
+	<string>
+	<fstream>
+	<vector>
+	<cmath>
+	"Create_Huffman_tree.h"
+	"Decode.h"
+	"Encode_char.h"
+	"Encode_string.h"
+	"Get_weight_char.h"
+	"Print_Huffman_Tree.h"
+
+1701748138 source:d:\github\huffman\create_huffman_tree.cpp
+	"menu.h"
+
+1701748138 source:d:\github\huffman\main.cpp
+	<iostream>
+	"menu.h"
+
+1701748138 d:\github\huffman\decode.h
+
+1701748138 d:\github\huffman\encode_char.h
+
+1701748138 d:\github\huffman\encode_string.h
+
+1701822296 d:\github\huffman\get_weight_char.h
+
+1701748138 d:\github\huffman\print_huffman_tree.h
+
+1701748138 source:d:\github\huffman\encode_char.cpp
+	"menu.h"
+
+1701748138 source:d:\github\huffman\encode_string.cpp
+	"menu.h"
+
+1701823091 source:d:\github\huffman\get_weight_char.cpp
+	"menu.h"
+
+1701823406 source:d:\github\huffman\menu.cpp
+	"menu.h"
+
+1701748138 source:d:\github\huffman\print_huffman_tree.cpp
+	"menu.h"
+
+1701748718 source:d:\github\huffman\decode.cpp
 	"menu.h"
 

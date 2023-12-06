@@ -17,7 +17,7 @@ typedef struct{
 }HTNode,*HuffmanTree;
 
 //创建哈夫曼树
-void create_Huffman_tree(HuffmanTree &HT,int n);
+void Create_Huffman_tree(HuffmanTree &HT,int n);
 //返回两个最小值
 void Select(HuffmanTree HT, int len, int &s1, int &s2);
 //打印输出函数
