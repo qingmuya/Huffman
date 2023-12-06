@@ -31,7 +31,7 @@ void Selectmenu(){
             }
             case 2:{
                 //构建哈夫曼树：建立哈夫曼树并存于文件：HfmTree.txt
-                //Create_Huffman_tree();
+                Create_Huffman_tree(Get_weight_char());
                 refresh();
                 break;
             }

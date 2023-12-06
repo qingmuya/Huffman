@@ -22,7 +22,7 @@
 //哈夫曼树的存储结构
 typedef struct{
     char ch;
-    int weight;  //结点的权重
+    double weight;  //结点的权重
     int parent, lchild, rchild;  //结点的双亲、左孩子、右孩子的下标
 }HTNode,*HuffmanTree;
 
