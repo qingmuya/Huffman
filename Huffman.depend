@@ -110,7 +110,8 @@
 1701855777 source:d:\code\github\huffman\get_weight_char.cpp
 	"menu.h"
 
-1701747205 source:d:\code\github\huffman\print_huffman_tree.cpp
+1701869829 source:d:\code\github\huffman\print_huffman_tree.cpp
+	"menu.h"
 
 1701744291 d:\github\huffman\print_huffman_code.h
 	<stdio.h>
