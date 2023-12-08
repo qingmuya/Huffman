@@ -14,9 +14,6 @@ void Encode_string(vector<char> ch,HuffmanCode HC){
         int index = distance(ch.begin(),it);
         outfile<<HC[index+1];
         }
-        else{
-            outfile<<c;
-        }
     }
     outfile.close();
 }
