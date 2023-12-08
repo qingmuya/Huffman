@@ -73,8 +73,8 @@ Status Traverse_R(HuffmanTree HT, int depth, int right, int tap,int m) {
 	depth++;
 	// 计算子树的父偏移量
 	tap = tap * 2 + (right == 1 ? 2 : 0);
-	if (HT[m].lchild == NULL && HT[m].rchild == NULL) return OK;
-	else if (HT[m].rchild == NULL) {
+	if (HT[m].lchild == -1 && HT[m].rchild == -1) return OK;
+	else if (HT[m].rchild == -1) {
 		// 打印左子树的位置
 		gotoxy(x * 2 - tap3, y + 1);
 		printf("┏");
@@ -82,7 +82,7 @@ Status Traverse_R(HuffmanTree HT, int depth, int right, int tap,int m) {
 		printf("┛");
 		Traverse_R(HT, depth, 0, tap , HT[m].lchild);
 	}
-	else if (HT[m].lchild == NULL) {
+	else if (HT[m].lchild == -1) {
 		// 打印右子树的位置
 		gotoxy(x * 2, y + 1);
 		printf("┗");

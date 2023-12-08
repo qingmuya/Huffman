@@ -75,13 +75,7 @@ void Selectmenu(){
             }
             case 6:{
                 //打印哈夫曼树
-                int n = 0;  //n用来存储权重不为0的结点的数量
-                for(int i = 1;i < arr.size() - 1;i++){
-                    if(arr[i] != 0){
-                        n++;
-                    }
-                }
-                Traverse(HT,2 * n - 1);
+                Traverse(HT,29 * 2 - 1);
                 refresh();
                 break;
             }

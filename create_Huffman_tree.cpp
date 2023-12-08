@@ -22,10 +22,10 @@ HuffmanTree Create_Huffman_tree(vector<double> arr){
     //初始化
     int m = n * 2 - 1,s1,s2;
     HT = new HTNode[m + 1];
-    for(int i = 1; i <= m ; ++i){
+    for(int i = 0; i <= m ; ++i){
         HT[i].parent = 0;
-        HT[i].lchild = 0;
-        HT[i].rchild = 0;
+        HT[i].lchild = -1;
+        HT[i].rchild = -1;
     }
 
     //字母的递增和元素序列的递增要分开控制

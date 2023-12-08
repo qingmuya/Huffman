@@ -20,15 +20,15 @@ void Decode(HuffmanTree HT,int m){
             char next_direction = data.front();    //代表下一个方向
             //如果为0则寻找左孩子，为1寻找右孩子
             if(next_direction == '0'){
-                if(HT[index].lchild == NULL){
-                    cout<<HT[index - 1].ch;
+                if(HT[index].lchild == -1){
+                    cout<<HT[index].ch;
                     break;
                 }
                 index = HT[index].lchild;   //指向结点
             }else{
-                if(HT[index].rchild == NULL){
-                    //data.push_front(index);
-                    cout<<HT[index - 1].ch;
+                if(HT[index].rchild == -1){
+                    //cout<<HT[index].ch;
+                    cout<<HT[index].ch;
                     break;
                 }
                 index = HT[index].rchild;   //指向结点
