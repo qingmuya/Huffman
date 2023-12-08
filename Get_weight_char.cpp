@@ -7,7 +7,6 @@ vector<double> Get_weight_char() {
     inputfile.close();
 
     // 字符转换为小写
-    transform(s.begin(), s.end(), s.begin(), ::tolower);
     vector<int> ch(30, 0);
     vector<double> pro;
     int sum = 0; // 记录每个字母总个数
