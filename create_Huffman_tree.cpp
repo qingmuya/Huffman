@@ -9,13 +9,8 @@ HuffmanTree Create_Huffman_tree(vector<double> arr){
      * 剔除权重为0的结点
     */
 
-    int n = 0;  //n用来存储结点的数量
-    for(int i = 0;i < arr.size() - 1;i++){
-        /*if(arr[i] != 0){
+    int n = arr.size() - 1;  //n用来存储结点的数量
 
-        }*/
-        n++;
-    }
 
     //新建哈夫曼树
     HuffmanTree HT;
@@ -43,7 +38,6 @@ HuffmanTree Create_Huffman_tree(vector<double> arr){
     HT[28].ch = ' ';
     HT[28].weight = arr[29];
 
-
     /**
      * 最小生成树
      * 最终树的结点个数为m：要添加结点的数量*2-1  （ m = 2 * n - 1 ）
@@ -63,7 +57,8 @@ HuffmanTree Create_Huffman_tree(vector<double> arr){
 
 //补全课本中函数，返回两个最小权值
 void Select(HuffmanTree HT, int len, int &s1, int &s2){
-    int i, min1 = 100, min2 = 100; //赋一个较大的值，防止开始就被返回
+    int i; //赋一个较大的值，防止开始就被返回
+    double min1 = 100, min2 = 100;
     for (i = 0; i <= len; i++){
         if (HT[i].weight < min1 && HT[i].parent == 0){
             min1 = HT[i].weight;
@@ -73,7 +68,7 @@ void Select(HuffmanTree HT, int len, int &s1, int &s2){
     double zs = HT[s1].weight; //将原值存放起来，然后先赋予最大值，防止s1被重复选择
     HT[s1].weight = 0x3f3f3f3f;
     for (i = 0; i <= len; i++){
-        if (HT[i].weight < min2 && HT[i].parent == 0){
+        if(HT[i].weight < min2 && HT[i].parent == 0){
             min2 = HT[i].weight;
             s2 = i;
         }

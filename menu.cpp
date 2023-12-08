@@ -6,15 +6,15 @@ vector<double> arr = Get_weight_char();
 vector<char> ch;
 
 void menu(){
-    printf("\t*****欢迎使用以下功能****\n");
-    printf("\t0：退出\n");
-    printf("\t1：获取字符权重\n");
-    printf("\t2：构建哈夫曼树\n");
-    printf("\t3：哈夫曼编码\n");
-    printf("\t4：加密\n");
-    printf("\t5：译码\n");
-    printf("\t6：打印哈夫曼树\n");
-    printf("\t键盘输入选项前数字来调用功能：\n");
+    cout<<"\t*****欢迎使用以下功能****"<<endl;
+    cout<<"\t1：获取字符权重"<<endl;
+    cout<<"\t2：构建哈夫曼树"<<endl;
+    cout<<"\t3：哈夫曼编码"<<endl;
+    cout<<"\t4：加密"<<endl;
+    cout<<"\t5：译码"<<endl;
+    cout<<"\t6：打印哈夫曼树"<<endl;
+    cout<<"\t0：退出"<<endl;
+    cout<<"\t键盘输入选项前数字来调用功能："<<endl;
 }
 
 void Selectmenu(){
