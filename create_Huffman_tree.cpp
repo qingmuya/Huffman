@@ -10,7 +10,7 @@ HuffmanTree Create_Huffman_tree(vector<double> arr){
     */
 
     int n = 0;  //n用来存储结点的数量
-    for(int i = 1;i < arr.size() - 1;i++){
+    for(int i = 0;i < arr.size() - 1;i++){
         /*if(arr[i] != 0){
 
         }*/
@@ -30,11 +30,19 @@ HuffmanTree Create_Huffman_tree(vector<double> arr){
 
     //字母的递增和元素序列的递增要分开控制
     int index_of_weight = 0;
-    for(int i = 0;i < arr.size() - 1;i++){
+    for(int i = 0;i < arr.size() - 4;i++){
         HT[index_of_weight].ch = (char)('a' + i);
         HT[index_of_weight].weight = arr[i + 1];
         index_of_weight++;
     }
+
+    HT[26].ch = (char)(44);
+    HT[26].weight = arr[27];
+    HT[27].ch = (char)(46);
+    HT[27].weight = arr[28];
+    HT[28].ch = ' ';
+    HT[28].weight = arr[29];
+
 
     /**
      * 最小生成树

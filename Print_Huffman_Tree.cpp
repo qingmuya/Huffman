@@ -68,7 +68,8 @@ Status Traverse_R(HuffmanTree HT, int depth, int right, int tap,int m) {
 
 	// 打印根的位置
 	gotoxy(x * 2, y);
-	printf("%.2f",HT[m].weight);
+	//printf("%.2f",HT[m].weight);
+	cout<<HT[m].ch;
 
 	// 在打印子树时，当前层数+1
 	depth++;

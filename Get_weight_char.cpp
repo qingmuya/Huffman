@@ -19,6 +19,7 @@ vector<double> Get_weight_char() {
     ch[27] = count(s.begin(),s.end(),',');
     ch[28] = count(s.begin(),s.end(),'.');
     ch[29] = count(s.begin(),s.end(),' ');
+    sum = sum + ch[27] + ch[28] + ch [29];
     pro.push_back(sum);//把总个数放入向量的第一个元素中剩下的下标1-26都是字母出现的概率
     // 计算各个字母概率
     for (int i = 1; i <= 29; i++) {

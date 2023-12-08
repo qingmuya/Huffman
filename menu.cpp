@@ -48,7 +48,7 @@ void Selectmenu(){
                         n++;
                     }
                 }
-                output(HT,n * 2 - 1);
+                output(HT,29 * 2 - 1);
                 cout<<"已将哈夫曼树输出至文件：HfmTree.txt"<<endl;
                 refresh();
                 break;
@@ -69,13 +69,7 @@ void Selectmenu(){
             }
             case 5:{
                 //译码：读取TextFile.txt文件编码，进行译码，并显示结果。
-                int n = 0;  //n用来存储权重不为0的结点的数量
-                for(int i = 1;i < arr.size() - 1;i++){
-                    if(arr[i] != 0){
-                        n++;
-                    }
-                }
-                Decode(HT,2 * n - 1);
+                Decode(HT,2 * 29 - 1);
                 refresh();
                 break;
             }

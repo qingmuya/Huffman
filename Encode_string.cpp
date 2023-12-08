@@ -16,5 +16,6 @@ void Encode_string(vector<char> ch,HuffmanCode HC){
         cout<<HC[index+1];
         }
     }
+    cout<<endl;
     outfile.close();
 }
