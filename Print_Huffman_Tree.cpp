@@ -1,7 +1,5 @@
 #include "menu.h"
-
 using namespace std;
-
 // 获取树的深度
 int BiTreeDepth(HuffmanTree HT,int m) {
 	//先查找权值最小的节点的索引，其所在的层数即为深度
