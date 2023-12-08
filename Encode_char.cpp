@@ -2,13 +2,13 @@
 using namespace std;
 
 void Encode_char(vector<double> arr,HuffmanCode &HC,HuffmanTree HT,vector<char> &ch){
-    int n = 0;  //n用来存储权重不为0的结点的数量
-    for(int i = 1;i < arr.size() - 1;i++){
-        if(arr[i] != 0){
-            n++;
-            ch.push_back('a'+i-1);
-        }
+    for(int i = 1;i <= 26;i++){
+        ch.push_back('a'+i-1);
     }
+    ch.push_back(',');
+    ch.push_back('.');
+    ch.push_back(' ');
+    int n = 29;
     HC = new char*[n+1];
     char cd[n];
     cd[n-1] = '\0';
@@ -29,9 +29,8 @@ void Encode_char(vector<double> arr,HuffmanCode &HC,HuffmanTree HT,vector<char> 
     }
     ofstream outfile("CodeFile.txt");
     for(int i = 1;i<=ch.size();i++){
+        cout<<ch[i-1]<<":"<<HC[i]<<endl;
         outfile<<ch[i-1]<<":"<<HC[i]<<endl;
     }
     outfile.close();
-
-
 }
