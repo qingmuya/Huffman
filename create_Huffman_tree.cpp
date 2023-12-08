@@ -74,12 +74,12 @@ void Select(HuffmanTree HT, int len, int &s1, int &s2){
     HT[s1].weight = zs;
 }
 
-//´òÓ¡Êä³ö
+//Êä³ö
 void output(HuffmanTree HT,int n){
     ofstream outfile;
     outfile.open("HfmTree.txt");
 
-    outfile<<"index"<<"\t"<<"char"<<"\t"<<"weight"<<"\t"<<"parent"<<"\t"<<"lchild"<<"\t"<<"rchile"<<endl;
+    outfile<<"index"<<"\t"<<"char"<<"\t"<<"weight"<<"\t"<<"parent"<<"\t"<<"lchild"<<"\t"<<"rchild"<<endl;
     for(int i = 0;i < n;i++){
         outfile<<i<<"\t"<<HT[i].ch<<"\t"<<HT[i].weight<<"\t"<<HT[i].parent<<"\t"<<HT[i].lchild<<"\t"<<HT[i].rchild<<endl;
     }

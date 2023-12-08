@@ -1,7 +1,5 @@
 #include "menu.h"
 
-
-
 HuffmanCode HC;//哈夫曼编码表
 HuffmanTree HT =NULL;//哈夫曼树
 vector<double> arr = Get_weight_char();
@@ -64,13 +62,25 @@ void Selectmenu(){
             }
             case 5:{
                 //译码：读取TextFile.txt文件编码，进行译码，并显示结果。
-                Decode();
+                int n = 0;  //n用来存储权重不为0的结点的数量
+                for(int i = 1;i < arr.size() - 1;i++){
+                    if(arr[i] != 0){
+                        n++;
+                    }
+                }
+                Decode(HT,2 * n - 1);
                 refresh();
                 break;
             }
             case 6:{
                 //打印哈夫曼树
-                Print_Huffman_Tree();
+                int n = 0;  //n用来存储权重不为0的结点的数量
+                for(int i = 1;i < arr.size() - 1;i++){
+                    if(arr[i] != 0){
+                        n++;
+                    }
+                }
+                Traverse(HT,2 * n - 1);
                 refresh();
                 break;
             }
