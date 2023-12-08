@@ -9,11 +9,12 @@ HuffmanTree Create_Huffman_tree(vector<double> arr){
      * 剔除权重为0的结点
     */
 
-    int n = 0;  //n用来存储权重不为0的结点的数量
+    int n = 0;  //n用来存储结点的数量
     for(int i = 1;i < arr.size() - 1;i++){
-        if(arr[i] != 0){
-            n++;
-        }
+        /*if(arr[i] != 0){
+
+        }*/
+        n++;
     }
 
     //新建哈夫曼树
@@ -30,11 +31,9 @@ HuffmanTree Create_Huffman_tree(vector<double> arr){
     //字母的递增和元素序列的递增要分开控制
     int index_of_weight = 0;
     for(int i = 0;i < arr.size() - 1;i++){
-        if(arr[i + 1] != 0){
-            HT[index_of_weight].ch = (char)('a' + i);
-            HT[index_of_weight].weight = arr[i + 1];
-            index_of_weight++;
-        }
+        HT[index_of_weight].ch = (char)('a' + i);
+        HT[index_of_weight].weight = arr[i + 1];
+        index_of_weight++;
     }
 
     /**

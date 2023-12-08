@@ -29,6 +29,10 @@ void Selectmenu(){
                 //获取字符权重：根据file.txt文件获取字符串权重
                 arr = Get_weight_char();
                 cout<<"获取字符串权重成功"<<endl;
+                cout<<"sum:"<<arr[0]<<endl;
+                for(int i = 1;i<=26;i++){
+                    cout<<(char)('a'+i-1)<<":"<<arr[i]<<endl;
+                }
                 refresh();
                 break;
             }
@@ -87,6 +91,10 @@ void Selectmenu(){
             default:
                 printf("输入非法字符，重新键入：\n");
                 break;
+            /***
+             * 未出现字母 哈夫曼编码
+             * 
+            */
         }
     }
 }
