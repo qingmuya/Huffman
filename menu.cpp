@@ -75,8 +75,9 @@ void Selectmenu(){
             }
             case 6:{
                 //打印哈夫曼树
-                std::cout << "Huffman Tree:" << std::endl;
+                cout<<"Huffman Tree:"<<endl;
                 printHuffmanTree(HT, 56, 0);
+                cout<<"哈夫曼树已经生成至文件:TreePrint.txt"<<endl;
                 refresh();
                 break;
             }
