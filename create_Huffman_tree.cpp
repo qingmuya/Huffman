@@ -11,7 +11,6 @@ HuffmanTree Create_Huffman_tree(vector<double> arr){
 
     int n = arr.size() - 1;  //n用来存储结点的数量
 
-
     //新建哈夫曼树
     HuffmanTree HT;
     //初始化

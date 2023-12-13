@@ -17,26 +17,6 @@ void menu(){
     printf("\t*键盘输入选项前数字来调用功能：\n");
 }
 
-BiTree set_tree(int i, int j,HuffmanTree HT){
-    BiTree L;
-    if(HT[i].lchild!=-1 && HT[i].rchild!=-1){
-        j++;
-        L=(BiTree)malloc(sizeof(BiTNode));//分配空间
-        L->data = HT[i].weight;
-        L->lchild = set_tree(HT[i].lchild, j, HT);
-        L->rchild = set_tree(HT[i].rchild, j, HT);
-    }
-    else{
-        j++;
-        L=(BiTree)malloc(sizeof(BiTNode));//分配空间
-        L->data = HT[i].weight;
-        L->lchild = NULL;
-        L->rchild = NULL;
-    }
-    return L;
-}
-
-
 void Selectmenu(){
     while(1){
         int xz;
@@ -95,7 +75,8 @@ void Selectmenu(){
             }
             case 6:{
                 //打印哈夫曼树
-                start(HT,56);
+                std::cout << "Huffman Tree:" << std::endl;
+                printHuffmanTree(HT, 56, 0);
                 refresh();
                 break;
             }
