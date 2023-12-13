@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include<iostream>//c++¿â
-#include<algorithm>//Ëã·¨¿â
+#include <iostream>//c++¿â
+#include <algorithm>//Ëã·¨¿â
 #include <string>//×Ö·û´®
 #include <fstream>
 #include <vector>

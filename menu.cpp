@@ -6,16 +6,36 @@ vector<double> arr = Get_weight_char();
 vector<char> ch;
 
 void menu(){
-    cout<<"\t*****欢迎使用以下功能****"<<endl;
-    cout<<"\t1：获取字符权重"<<endl;
-    cout<<"\t2：构建哈夫曼树"<<endl;
-    cout<<"\t3：哈夫曼编码"<<endl;
-    cout<<"\t4：加密"<<endl;
-    cout<<"\t5：译码"<<endl;
-    cout<<"\t6：打印哈夫曼树"<<endl;
-    cout<<"\t0：退出"<<endl;
-    cout<<"\t键盘输入选项前数字来调用功能："<<endl;
+    printf("\t**************欢迎使用以下功能***************\n");
+    printf("\t*0：退出\n");
+    printf("\t*1：获取字符权重\n");
+    printf("\t*2：构建哈夫曼树\n");
+    printf("\t*3：哈夫曼编码\n");
+    printf("\t*4：加密\n");
+    printf("\t*5：译码\n");
+    printf("\t*6：打印哈夫曼树\n");
+    printf("\t*键盘输入选项前数字来调用功能：\n");
 }
+
+BiTree set_tree(int i, int j,HuffmanTree HT){
+    BiTree L;
+    if(HT[i].lchild!=-1 && HT[i].rchild!=-1){
+        j++;
+        L=(BiTree)malloc(sizeof(BiTNode));//分配空间
+        L->data = HT[i].weight;
+        L->lchild = set_tree(HT[i].lchild, j, HT);
+        L->rchild = set_tree(HT[i].rchild, j, HT);
+    }
+    else{
+        j++;
+        L=(BiTree)malloc(sizeof(BiTNode));//分配空间
+        L->data = HT[i].weight;
+        L->lchild = NULL;
+        L->rchild = NULL;
+    }
+    return L;
+}
+
 
 void Selectmenu(){
     while(1){
@@ -75,17 +95,13 @@ void Selectmenu(){
             }
             case 6:{
                 //打印哈夫曼树
-                Traverse(HT,29 * 2 - 1);
+                start(HT,56);
                 refresh();
                 break;
             }
             default:
                 printf("输入非法字符，重新键入：\n");
                 break;
-            /***
-             * 未出现字母 哈夫曼编码
-             *
-            */
         }
     }
 }

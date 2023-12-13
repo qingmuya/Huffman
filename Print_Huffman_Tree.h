@@ -21,21 +21,24 @@
 typedef int Status;
 
 // 树数据类型
-typedef int TElemType;
+typedef char TElemType;
 
 // 二叉树结构体
 typedef struct BiTNode {
-	TElemType data;
+	char data;
 	struct BiTNode* lchild, * rchild;
 } BiTBode, *BiTree;
 
+void start(HuffmanTree HT,int numofTree);
+
+BiTree conversion(HuffmanTree HT,int num);
+
 // 部分需要的接口
+// 将二叉树分为根，左子树，右子树三个部分
+Status BreakBiTree(BiTree& T, BiTree& L, BiTree& R);
 // 获取树的深度
-int BiTreeDepth(HuffmanTree HT,int m);
+int BiTreeDepth(BiTree T);
 
-Status Traverse(HuffmanTree HT,int m);
+void print(BiTree Hb);
 
-#endif // PRINT_HUFFMAN_TREE_H_INCLUDED
-
-
-
+#endif

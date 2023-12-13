@@ -52,6 +52,8 @@ HuffmanTree Create_Huffman_tree(vector<double> arr){
         HT[i].weight = HT[s1].weight + HT[s2].weight;
     }
 
+    HT[56].parent = -1;
+
     return HT;
 }
 
