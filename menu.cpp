@@ -63,7 +63,7 @@ void Selectmenu(){
             case 4:{
                 //加密：根据编码将file.txt文件加密，结果存于TextFile.txt
                 Encode_string(ch,HC);
-                cout<<"加密后的短文已经生成至文件:TextFile.txt"<<endl;
+                cout<<"\n加密后的短文已经生成至文件:TextFile.txt"<<endl;
                 refresh();
                 break;
             }

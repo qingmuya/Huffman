@@ -67,7 +67,7 @@
 	"Get_weight_char.h"
 	"Print_Huffman_Tree.h"
 
-1701834340 d:\github\huffman\create_huffman_tree.h
+1702434688 d:\github\huffman\create_huffman_tree.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -120,7 +120,7 @@
 	<string.h>
 	<iostream>
 
-1701833667 d:\github\huffman\menu.h
+1702434688 d:\github\huffman\menu.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -137,29 +137,25 @@
 	"Get_weight_char.h"
 	"Print_Huffman_Tree.h"
 
-1702019041 source:d:\github\huffman\create_huffman_tree.cpp
+1702435632 source:d:\github\huffman\create_huffman_tree.cpp
 	"menu.h"
 
-1701748138 source:d:\github\huffman\main.cpp
-	<iostream>
-	"Cal_len_Huffman.h"
-	"create_Huffman_tree.h"
-	"print_Huffman_code.h"
+1702434688 source:d:\github\huffman\main.cpp
 	<iostream>
 	"menu.h"
 
-1701998708 d:\github\huffman\decode.h
+1702434688 d:\github\huffman\decode.h
 	"menu.h"
 
-1701837274 d:\github\huffman\encode_char.h
+1702434688 d:\github\huffman\encode_char.h
 
-1701838506 d:\github\huffman\encode_string.h
+1702434688 d:\github\huffman\encode_string.h
 	"menu.h"
 
-1701842652 d:\github\huffman\get_weight_char.h
+1702434688 d:\github\huffman\get_weight_char.h
 	"menu.h"
 
-1701998708 d:\github\huffman\print_huffman_tree.h
+1702434688 d:\github\huffman\print_huffman_tree.h
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -167,23 +163,24 @@
 	<Windows.h>
 	<climits>
 	"menu.h"
+	<iomanip>
 
-1702018955 source:d:\github\huffman\encode_char.cpp
+1702434688 source:d:\github\huffman\encode_char.cpp
 	"menu.h"
 
-1702019427 source:d:\github\huffman\encode_string.cpp
+1702436853 source:d:\github\huffman\encode_string.cpp
 	"menu.h"
 
-1702019435 source:d:\github\huffman\get_weight_char.cpp
+1702436836 source:d:\github\huffman\get_weight_char.cpp
 	"menu.h"
 
-1702019041 source:d:\github\huffman\menu.cpp
+1702437059 source:d:\github\huffman\menu.cpp
 	"menu.h"
 
-1702019041 source:d:\github\huffman\print_huffman_tree.cpp
+1702434688 source:d:\github\huffman\print_huffman_tree.cpp
 	"menu.h"
 
-1701998708 source:d:\github\huffman\decode.cpp
+1702434688 source:d:\github\huffman\decode.cpp
 	"menu.h"
 	<windows.h>
 
