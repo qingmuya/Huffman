@@ -6,11 +6,12 @@ vector<double> Get_weight_char() {
     string s((istreambuf_iterator<char>(inputfile)), istreambuf_iterator<char>());
     inputfile.close();
 
-    // 字符转换为小写
-    transform(s.begin(), s.end(), s.begin(), ::tolower);//转换大小写
+    // 字母转换为小写
+    transform(s.begin(), s.end(), s.begin(), ::tolower);
     vector<int> ch(30, 0);
     vector<double> pro;
     int sum = 0; // 记录每个字母总个数
+    //添加结点，也就是文本中会出现的符号
     for (int i = 1; i < 27; i++) {
         char n = 'a' + i-1;
         sum = sum + count(s.begin(), s.end(), n);
@@ -25,6 +26,7 @@ vector<double> Get_weight_char() {
     for (int i = 1; i <= 29; i++) {
         pro.push_back(static_cast<double>(ch[i])/sum);
     }
+    //返回每个字符的权重
     return pro;
 }
 

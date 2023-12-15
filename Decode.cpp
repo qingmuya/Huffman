@@ -3,6 +3,7 @@
 
 using namespace std;
 
+
 void Decode(HuffmanTree HT,int m){
     //stream流和向量结合使用，读取文件内容
     ifstream inputfile("Textfile.txt");
